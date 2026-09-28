@@ -45,7 +45,13 @@ export interface Chapter {
   domain: Domain;
   weight: number;
   description: string;
+  /** Core concept ids implemented in the knowledge base for this section */
   conceptIds: string[];
+  /**
+   * Official H13-624 V5.5 syllabus topics that MUST be covered in this section.
+   * Used to audit completeness and show learners what the exam expects.
+   */
+  requiredTopics: string[];
 }
 
 export interface UserProgress {
